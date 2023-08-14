@@ -1,0 +1,14 @@
+echo "Enter the number of terms in Fibonacci sequence:"
+read n
+a=0
+b=1
+echo "Fibonacci sequence:"
+echo -n "$a "
+for (( i=2; i<n; i++ ))
+do
+    echo -n "$b "
+    next=$((a + b))
+    a=$b
+    b=$next
+done
+echo $"fibonacci series:"
