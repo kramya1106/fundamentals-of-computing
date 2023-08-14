@@ -1,0 +1,9 @@
+echo "Enter a string:"
+read input
+cleaned_input=$(echo "$input" | tr -d -c '[:alnum:]' | tr '[:upper:]' '[:lower:]')
+reversed_input=$(echo "$cleaned_input" | rev)
+if [ "$cleaned_input" == "$reversed_input" ]; then
+    echo "$input is a palindrome."
+else
+    echo "$input is not a palindrome."
+fi
